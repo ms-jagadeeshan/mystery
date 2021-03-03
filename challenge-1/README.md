@@ -43,6 +43,7 @@ Sample imput
 2,6
 ```
 You can have any number inputs, but all those have to be pairs.
+<br>
 When we run the main program it takes to menu, lets say you choose addition , then it gives two options for you
 <br>
 1)To show results in output console
