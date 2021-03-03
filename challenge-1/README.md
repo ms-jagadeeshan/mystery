@@ -34,6 +34,15 @@ git clone https://github.com/ms-jagadeeshan/mystery.git
 
 This program takes inputs of two variables in the file called 'input.txt' and performs the additiion,subraction and some other operations also
 <br>
+Sample imput
+```
+2,4
+2.2,5
+3.2,4
+6,6
+2,6
+```
+You can have any number inputs, but all those have to be pairs.
 When we run the main program it takes to menu, lets say you choose addition , then it gives two options for you
 <br>
 1)To show results in output console
