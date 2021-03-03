@@ -34,8 +34,9 @@ git clone https://github.com/ms-jagadeeshan/mystery.git
 
 This program takes inputs of two variables in the file called 'input.txt' and performs the additiion,subraction and some other operations also
 <br>
-When we run the main program it takes to menu, lets say you choose addition , then it gives two options for you<br>
-1) To show results in output console
+When we run the main program it takes to menu, lets say you choose addition , then it gives two options for you
+<br>
+1)To show results in output console
 <br>
 2) Export as file
 <br>
