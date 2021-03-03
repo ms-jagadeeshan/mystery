@@ -41,7 +41,7 @@ When we run the main program it takes to menu, lets say you choose addition , th
 2) Export as file
 <br>
 
-You can choose whatever you want.
+You can choose whatever you want.Export works for addition.
 <br>
 But when select subraction and choose to export as file it gives error  and eventhough when you choose 'to show results', it show the values in output console
 
