@@ -6,7 +6,9 @@ using std::cout;
 using std::string;
 extern int no_of_inputs;
 extern int function_code;
-void csvAnalyse(FILE *inputdata)
+
+//calculates no of inputs
+void inputAnalyse(FILE *inputdata)
 {
     char s[200];
     while (fscanf(inputdata, "%s", s) == 1)
@@ -14,6 +16,8 @@ void csvAnalyse(FILE *inputdata)
         ++no_of_inputs;
     }
 }
+
+//reads data from input file and assigns to 2d array called data
 void getData(float *data, FILE *inputdata)
 {
     for (int i = 0; i < no_of_inputs; ++i)
@@ -29,6 +33,7 @@ void getData(float *data, FILE *inputdata)
     }
 }
 
+//prints menu and returns the function code
 int printMenu(int a)
 {
     int option;
@@ -40,17 +45,18 @@ int printMenu(int a)
     printf("3.Multiplication\n"); //function code =>3,
     printf("4.Division\n");       //function code =>4,
     printf("5.Average\n");        //function code =>5,
-    printf("6.Maximum\n");        //function code =>6,
-    printf("7.Minimum\n");        //function code =>7,
-    printf("Your choice(1-7):");
+    printf("Your choice(1-5):");
     cin >> option;
-    if (option <= 7 && option >= 1)
+    if (option <= 5 && option >= 1)
         function_code = option;
     else
         printMenu(a);
 
     return function_code;
 }
+
+// FUNCTIONS
+
 void addition(float data[][2], float *result)
 {
     for (int i = 0; i < no_of_inputs; ++i)
@@ -128,39 +134,6 @@ void average(float data[][2], float *result)
         result[i] = result[i] / (float)2;
     }
 }
-void minimum(float data[][2], float *result)
-{
-    float minimum;
-    for (int i = 0; i < no_of_inputs; ++i)
-    {
-        minimum = data[i][0];
-        for (int j = 0; j < 2 - 1; ++j)
-        {
-            if (data[i][j] > data[i][j + 1])
-            {
-                minimum = data[i][j + 1];
-            }
-        }
-        result[i] = minimum;
-    }
-}
-void maximum(float data[][2], float *result)
-{
-    float maximum;
-    for (int i = 0; i < no_of_inputs; ++i)
-    {
-        maximum = data[i][0];
-        for (int j = 0; j < 2 - 1; ++j)
-        {
-            if (data[i][j] < data[i][j + 1])
-            {
-                maximum = data[i][j + 1];
-            }
-        }
-        result[i] = maximum;
-    }
-}
-
 void printresult(float *result)
 {
     int option;

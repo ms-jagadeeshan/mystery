@@ -19,7 +19,7 @@ int main()
     }
 
     //analyse input data
-    csvAnalyse(inputdata);
+    inputAnalyse(inputdata);
     fclose(inputdata);
     //re-opens input file
     inputdata = fopen("input.txt", "r");
@@ -53,12 +53,6 @@ int main()
         break;
     case 5:
         average(data, result);
-        break;
-    case 6:
-        maximum(data, result);
-        break;
-    case 7:
-        minimum(data, result);
         break;
     }
 
